@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Algo7.Queen"
+             Title="Расстановка ферзей">
+    
+    <VerticalStackLayout
+            Spacing="70"
+            Padding="30"
+            Margin="40">
+
+        <Grid ColumnDefinitions="5*, 5*" WidthRequest="400" ColumnSpacing="10">
+            <Button Grid.Column="0" x:Name="updateButton" Clicked="updateButton_Clicked" Text="Найти одно решение"/>
+            <Button Grid.Column="1" x:Name="updateButton2" Clicked="updateButton2_Clicked" Text="Найти все решения"/>
+        </Grid>
+
+
+        <Frame BackgroundColor="Transparent" CornerRadius="0" Margin="0" Padding="0" HorizontalOptions="Center">
+            <Grid x:Name="chessBoard" ColumnDefinitions="100,100,100,100,100,100,100,100" RowDefinitions="100,100,100,100,100,100,100,100" HorizontalOptions="Center">
+            </Grid>
+        </Frame>
+
+        <Picker x:Name="resultList" SelectedIndexChanged="resultList_SelectedIndexChanged" HorizontalOptions="Center" FontSize="25"/>
+
+    </VerticalStackLayout>
+   
+</ContentPage>
